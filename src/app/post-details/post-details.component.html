@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h1>Post Details</h1>
+            <div class="row">
+                <div class="col-lg-7 col-md-5 col-sm-6">
+                    <div class="white-box text-center">
+                        <img [src]="post.url" class=""></div>
+                    </div>
+                <div class="col-lg-5 col-md-7 col-sm-6">
+                    <h4 class="box-title mt-5">Title: {{post.title}}</h4>
+                    <p><i>AlbumId: {{post.albumId}}</i></p>
+                    <p><i>Id: {{post.id}}</i></p>
+                    <br>
+                    <button class="btn btn-primary" type="button" [routerLink]="['/edit-post', post.id]">Edit</button> |
+                    <button class="btn btn-danger" type="button" (click)="deletePost(post.id)">Delete</button> |
+                    <a routerLink="/posts" class="btn btn-primary">Go Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
